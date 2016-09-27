@@ -1,0 +1,23 @@
+#terminal-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*margin: 0 auto;*/
+    padding: 2px;
+}
+
+#terminal-container .terminal {
+    background-color: #111;
+    color: #fafafa;
+    padding: 2px;
+}
+
+#terminal-container .terminal:focus .terminal-cursor {
+    background-color: #fafafa;
+}
+
+/*nkd - to fix blue border on focus*/
+#terminal-container .terminal:focus {
+    outline-color: transparent;
+} 
+    

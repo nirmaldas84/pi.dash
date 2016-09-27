@@ -1,0 +1,169 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font: 14px monospace, arial, sans-serif;
+}
+
+
+iframe {
+  border: 0px grey solid;
+}
+
+.slate-style {
+  box-shadow: 0px 5px 10px black;
+  background-color: rgb(50,50,50);
+}
+
+.outer-container {
+  height: 100%;
+  display: flex;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+/*SIDE NAV*/
+
+.nav-container {
+  width: 46px;
+  height: 100%;
+  background-color: black;
+  flex: 0 1 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page-wrapper {
+  height: 100%;
+  flex: 1 1 auto;
+}
+
+/*Message PAGE*/
+.msg-page-text {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*HOME PAGE*/
+.home-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  padding: 5px;
+}
+
+.home-center-pane {
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.home-main-top {
+  flex: 0 1 auto;
+}
+
+.home-main-center-content {
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.home-title {
+  text-align: center;
+  color: black;
+}
+
+.stat-thumb h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (max-height: 800px) {
+
+  .stat-thumb h1 {
+    font-size: 18px;
+  }
+
+  .home-main-top h2 {
+    font-size: 22px;
+  }
+
+  h1, h2 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .stat-thumb p {
+    margin-bottom: 5px;
+  }
+
+  hr.compact {
+    margin-top: 15px;
+    margin-bottom: 8px;
+  }
+}
+
+.stat-thumb-icon {
+  margin: 5px;
+  font-size: 18px;
+  position: absolute;
+}
+
+.home-right-pane {
+  flex: 0 1 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+
+  /*override default boostrap*/
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.home-tab-content {
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.home-tab-cont {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.home-frame {
+  height: 100%;
+  width: 100%;
+}
+
+/*BROWSE PAGE*/
+.browse-wrapper {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.browse-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#browse-iframe
+{
+  flex: 1 1 auto;
+  height: '100%';
+}

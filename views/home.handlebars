@@ -1,0 +1,119 @@
+{{> nav}}
+
+<div class="home-container">
+
+    <div class="home-center-pane container">
+
+        <!--center pane top pane displaying device information-->
+        <div class="home-main-top">
+            <h2> <!--class="page-header">-->
+                <span class="glyphicon glyphicon-stats"></span>&nbsp;
+                Pi Dashboard
+
+                <div class="pull-right">
+
+                    <a class="btn btn-primary btn-sm btn-reboot" href="#">
+                        <span class="glyphicon glyphicon-repeat"></span>&nbsp;
+                        <span class="txt">Reboot</span>
+                    </a>
+
+                    <a class="btn btn-primary btn-sm btn-shutdown" href="#">
+                        <span class="glyphicon glyphicon glyphicon-off"></span>&nbsp;
+                        <span class="txt">Shutdown</span>
+                    </a>
+                </div>
+            </h2>
+
+            <hr class="compact"/>
+
+            <div class="row">
+
+                <!--temp-->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="thumbnail stat-thumb slate-style">
+
+                        <span class="glyphicon glyphicon-fire stat-thumb-icon"></span>
+
+                        <h1 class="temp-content">
+                            <span id="temp">0</span>
+                            <small>°C</small>
+                        </h1>
+                        <p class="text-center">
+                            <small>CPU Temperature</small>
+                        </p>
+                    </div>
+                </div>
+
+                <!--space usage-->
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="thumbnail stat-thumb slate-style">
+
+                        <span class="glyphicon glyphicon-hdd stat-thumb-icon"></span>
+
+                        <h1 class="disk-pcent-content">
+                            <span id="disk-pcent">0</span>
+                            <small>%</small>
+                        </h1>
+                        <p class="text-center">
+                            <small> 
+                                Total: <span id="disk-total"></span>&nbsp;
+                                Used: <span id="disk-used"></span>&nbsp;
+                                Avail: <span id="disk-avail"></span>
+                            </small>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--center pane center content housing tab container-->
+        <div class="home-main-center-content">
+
+            <!--Nav tabs-->
+            <ul class="nav nav-tabs" role="tablist">
+                
+                <li class="active xTerm-tab">
+                    <a href="#ssh" data-toggle="tab">
+                        <span class="glyphicon glyphicon-console"></span>
+                        SSH
+                    </a>
+                </li>
+
+                {{#each homeTabServices}}
+
+                    <li role="tab" class="deluge-tab">
+                        <a href="#{{this.name}}" data-toggle="tab">
+                            
+                            {{#if this.iconClass}}
+                                <span class="{{this.iconClass}}"></span>
+                            {{/if}}
+
+                            {{this.name}}
+                        </a>
+                    </li>
+                {{/each}}
+                
+            </ul>
+
+            <!--Tab panes-->
+            <div class="tab-content home-tab-content slate-style">
+
+                <div id="ssh" class="tab-pane active fade in ">
+                    {{> term-client}}
+                </div>
+                
+                {{#each homeTabServices}}
+                    <div id="{{this.name}}" class="tab-pane home-tab-cont">
+                        <iframe class="home-frame" delayed-src="{{this.url}}">
+                        </iframe>
+                    </div>
+                {{/each}}
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="javascripts/home.js"></script>

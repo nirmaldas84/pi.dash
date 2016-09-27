@@ -1,0 +1,15 @@
+<div class="nav-container">
+    
+    <ul class="nav nav-pills nav-stacked side-nav top-nav">
+
+        {{#each widgets}}
+            <li>
+                <a href="{{route}}" data-toggle="tooltip" data-placement="right" title={{name}}>
+                    <span class="{{iconClass}}"></span>
+                </a>
+            </li>
+        {{/each}}
+
+    </ul>
+
+</div>
