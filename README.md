@@ -8,3 +8,5 @@ So, there were multiple services that I started using on regular basis in additi
 And it was not very convinient using different applications and URLs to use these services. 
 So, this idea developed of having a single platform where I could access all these whether from my desktop PC, or laptop or smart phone. 
 
+## Screenshots
+![alt text](https://github.com/nirmal-das/pi.dash/blob/master/doc/img/ss-home.png "Home")
