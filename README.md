@@ -10,3 +10,5 @@ So, this idea developed of having a single platform where I could access all the
 
 ## Screenshots
 ![alt text](https://github.com/nirmal-das/pi.dash/blob/master/doc/img/ss-home.png "Home")
+
+![alt text](https://github.com/nirmal-das/pi.dash/blob/master/doc/img/ss-plex.png "Plex")
